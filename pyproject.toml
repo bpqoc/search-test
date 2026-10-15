@@ -5,14 +5,10 @@ description = "Builds the OCA module summary data behind the oca-module-search s
 requires-python = ">=3.12"
 dependencies = [
     "anthropic>=0.70",
-    "oca-reference",
 ]
 
 [project.scripts]
 oca-index = "oca_index.cli:main"
-
-[tool.uv.sources]
-oca-reference = { path = "../../stuff/oca/oca-reference", editable = true }
 
 [dependency-groups]
 dev = ["pytest", "ruff"]

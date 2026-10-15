@@ -6,9 +6,8 @@ from collections.abc import Iterable, Mapping
 from datetime import UTC, datetime
 from pathlib import Path
 
-from oca_reference import db
-from oca_reference.sync import Paths
-
+from . import db
+from .checkout import Paths
 from .config import MIGRATIONS_PATH, ROOT, Settings
 from .summaries import load_cache, summary_key
 

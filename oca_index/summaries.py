@@ -13,11 +13,10 @@ from collections.abc import Iterable, Mapping, Sequence
 from dataclasses import dataclass
 from pathlib import Path
 
-from oca_reference import db
-from oca_reference.parse import clean_markup
-from oca_reference.sync import Paths
-
+from . import db
+from .checkout import Paths
 from .config import SUMMARIES_PATH, WORK, Settings
+from .parse import clean_markup
 
 PENDING = WORK / "pending"
 RESULTS = WORK / "results"

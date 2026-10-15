@@ -12,9 +12,8 @@ from collections.abc import Iterable, Mapping
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import UTC, datetime
 
-from oca_reference import db
-from oca_reference.sync import Paths
-
+from . import db
+from .checkout import Paths
 from .config import MIGRATIONS_PATH, Settings
 
 # Top-level folders in OCA repos that aren't modules

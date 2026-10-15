@@ -48,14 +48,15 @@ and summarize what changed.
   didn't change (or is identical across versions) is never summarized twice.
 - Migration PRs are found by the module folders a PR adds on its target branch, not by title:
   titles are inconsistent ("mig sale rental", missing version tags).
-- Sync and parsing reuse [oca-reference](../../stuff/oca/oca-reference) as a library.
-- `experiment/` and `eval/` hold the search comparisons that led to this design.
+- Fetching (blobless clones with sparse worktrees of module folders only) and parsing
+  (manifest, readme, models and fields via `ast`) came from the oca-reference prototype,
+  without its embedding search.
+- `experiment/` and `eval/` hold the search comparisons that led to this design. The
+  `experiment/` scripts still need the oca-reference prototype, for its embeddings.
 
 ### Known Issues
 
 - The Batch API path (`summarize`) hasn't been run yet; every summary so far came from Claude
   Code subagents.
-- `pyproject.toml` points at a local oca-reference checkout (`../../stuff/oca/oca-reference`),
-  so this only runs on a machine laid out like that until it's a git dependency or vendored.
 - New modules that only exist in an open PR aren't searchable, since there's no summary for
   them; their PRs are still recorded in `data/migrations.jsonl`.

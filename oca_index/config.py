@@ -1,11 +1,10 @@
-"""The team's oca-index.toml, and the oca-reference Config it implies."""
+"""The team's oca-index.toml."""
 
 import tomllib
+from collections.abc import Iterable
 from dataclasses import dataclass
+from fnmatch import fnmatchcase
 from pathlib import Path
-
-from oca_reference.config import Config as RefConfig
-from oca_reference.config import load_defaults
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "oca-index.toml"
@@ -26,22 +25,17 @@ class Settings:
     batch_size: int
     migrations_url: str
 
-    def ref_config(self) -> RefConfig:
-        """oca-reference settings for sync and parsing; the rest keep its shipped defaults."""
-        defaults = load_defaults()
-        return RefConfig(
-            org="OCA",
-            versions=self.versions,
-            default_version=self.versions[-1],
-            exclude_repos=self.exclude_repos,
-            keep_repos=self.keep_repos,
-            exclude_modules=self.exclude_modules,
-            sparse_exclude=tuple(defaults["sparse_exclude"]),
-            parallel=defaults["parallel"],
-            embed_model=defaults["embed_model"],
-            auto_sync=False,
-            auto_sync_days=defaults["auto_sync_days"],
-        )
+    def repo_selected(self, repo: str) -> bool:
+        """Not matched by `exclude_repos`, or rescued by `keep_repos`."""
+        return _matches(repo, self.keep_repos) or not _matches(repo, self.exclude_repos)
+
+    def module_selected(self, module: str) -> bool:
+        return not _matches(module, self.exclude_modules)
+
+
+def _matches(name: str, patterns: Iterable[str]) -> bool:
+    # Case-sensitive so a pattern means the same on every platform, like GitHub repo names
+    return any(fnmatchcase(name, p) for p in patterns)
 
 
 def parse_settings(raw: dict) -> Settings:
