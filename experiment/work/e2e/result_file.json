@@ -1,0 +1,11 @@
+{
+  "R1": ["sale_financial_risk", "account_financial_risk", "stock_financial_risk"],
+  "R2": ["purchase_tier_validation", "purchase_order_approval_block"],
+  "R3": ["auditlog", "tracking_manager"],
+  "R4": ["sale_restricted_qty", "sell_only_by_packaging", "product_customerinfo"],
+  "R5": ["subscription_oca", "contract", "partner_invoicing_mode_monthly"],
+  "R6": ["auto_backup"],
+  "R7": ["account_move_tier_validation", "account_move_tier_validation_approver"],
+  "R8": ["product_pack", "sale_product_pack"],
+  "R9": ["account_payment_order", "account_banking_sepa_credit_transfer"]
+}
