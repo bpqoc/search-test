@@ -4,3 +4,6 @@ experiment/work/batches/
 experiment/work/summary_vectors.npy
 experiment/work/e2e/oca_18.0_summaries.jsonl
 experiment/work/e2e/bm25.py
+# Built by skill/build.py
+skill/dist/
+skill/oca-module-search/data/
