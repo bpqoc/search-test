@@ -1,0 +1,11 @@
+7. [17.0] customers must order at least 10 units or in multiples of a box
+9. [19.0] run slow tasks in the background so users don't have to wait
+12. [19.0] bill customers automatically every month for their subscription
+13. [17.0] customers send support tickets that our team answers
+14. [16.0] schedule technicians to go out to customer sites
+15. [19.0] store and organize company documents in folders
+18. [16.0] back up the database every night
+26. [18.0] customers sign quotes and contracts electronically
+30. [17.0] sync products and orders with our Shopify store
+38. [18.0] weekly employee mood survey with a happiness score dashboard
+42. [18.0] track employee vaccination records

@@ -1,0 +1,32 @@
+[project]
+name = "oca-index"
+version = "0.1.0"
+description = "Builds the OCA module summary data behind the oca-module-search skill"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.70",
+    "oca-reference",
+]
+
+[project.scripts]
+oca-index = "oca_index.cli:main"
+
+[tool.uv.sources]
+oca-reference = { path = "../../stuff/oca/oca-reference", editable = true }
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["experiment"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

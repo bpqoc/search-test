@@ -1,0 +1,13 @@
+{
+  "2": {"strong": ["purchase_tier_validation", "base_tier_validation"], "partial": ["purchase_order_approved"], "other_versions": []},
+  "5": {"strong": ["account_statement_import_file"], "partial": ["account_statement_import_camt", "account_statement_import_ofx", "account_statement_import_sheet_file"], "other_versions": []},
+  "8": {"strong": ["stock_cycle_count"], "partial": ["stock_location_validate_inventory"], "other_versions": []},
+  "11": {"strong": ["report_xlsx", "report_xlsx_helper"], "partial": ["excel_import_export"], "other_versions": []},
+  "21": {"strong": ["account_payment_order", "account_banking_sepa_credit_transfer"], "partial": ["account_payment_batch_process"], "other_versions": []},
+  "22": {"strong": ["web_responsive"], "partial": [], "other_versions": []},
+  "32": {"strong": [], "partial": ["tms_expense"], "other_versions": ["fleet_vehicle_log_fuel"]},
+  "36": {"strong": [], "partial": ["route_planning"], "other_versions": []},
+  "39": {"strong": [], "partial": [], "other_versions": ["account_invoice_google_document_ai"]},
+  "40": {"strong": [], "partial": ["ai_oca_bridge_chatter"], "other_versions": []},
+  "43": {"strong": [], "partial": ["sale_channel", "connector_importer"], "other_versions": []}
+}

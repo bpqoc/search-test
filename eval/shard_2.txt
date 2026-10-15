@@ -1,0 +1,11 @@
+2. [19.0] purchase orders over a certain amount need a manager to approve them
+5. [18.0] upload the bank statement file the bank sends us
+8. [16.0] plan regular counts of some warehouse locations instead of one big yearly inventory
+11. [16.0] create reports as Excel spreadsheets
+21. [16.0] pay many vendor bills at once with a file for the bank
+22. [17.0] make the backend usable on phones
+32. [17.0] keep track of vehicle fuel purchases and consumption
+36. [18.0] schedule drone deliveries
+39. [18.0] scan paper receipts with a phone camera to create expense reports automatically
+40. [18.0] let website visitors chat with an AI assistant
+43. [18.0] import orders from our Amazon seller account

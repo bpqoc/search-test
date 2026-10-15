@@ -1,0 +1,275 @@
+# Search test cases. kind:
+#   exists:       a module does this in `version`; `expected` lists modules that count as a hit
+#   other_version: no module in `version`, but one in another version (`expected`); a good
+#                 answer says no for this version and points to the other version / migration
+#   absent:       no OCA module does this in any version (checked against the full index by
+#                 keyword and embedding search); `partial` lists acceptable "close but not it"
+# Versions and absences checked against the 2026-10-15 sync.
+
+# --- exists ---
+[[case]]
+query = "stop a sales order being confirmed if the customer owes us too much money"
+version = "16.0"
+kind = "exists"
+expected = ["sale_financial_risk"]
+
+[[case]]
+query = "purchase orders over a certain amount need a manager to approve them"
+version = "19.0"
+kind = "exists"
+expected = ["purchase_tier_validation"]
+
+[[case]]
+query = "keep a history of who changed what on records"
+version = "17.0"
+kind = "exists"
+expected = ["auditlog"]
+
+[[case]]
+query = "limit which products each customer is allowed to buy"
+version = "18.0"
+kind = "exists"
+expected = ["sale_order_product_assortment", "product_assortment"]
+
+[[case]]
+query = "upload the bank statement file the bank sends us"
+version = "18.0"
+kind = "exists"
+expected = ["account_statement_import_file", "account_statement_import_sheet_file", "account_statement_import_base"]
+
+[[case]]
+query = "break one delivery into two separate deliveries"
+version = "19.0"
+kind = "exists"
+expected = ["stock_split_picking"]
+
+[[case]]
+query = "customers must order at least 10 units or in multiples of a box"
+version = "17.0"
+kind = "exists"
+expected = ["sale_restricted_qty"]
+
+[[case]]
+query = "plan regular counts of some warehouse locations instead of one big yearly inventory"
+version = "16.0"
+kind = "exists"
+expected = ["stock_cycle_count"]
+
+[[case]]
+query = "run slow tasks in the background so users don't have to wait"
+version = "19.0"
+kind = "exists"
+expected = ["queue_job"]
+
+[[case]]
+query = "give each user a job role that bundles all the access rights they need"
+version = "17.0"
+kind = "exists"
+expected = ["base_user_role"]
+
+[[case]]
+query = "create reports as Excel spreadsheets"
+version = "16.0"
+kind = "exists"
+expected = ["report_xlsx"]
+
+[[case]]
+query = "bill customers automatically every month for their subscription"
+version = "19.0"
+kind = "exists"
+expected = ["contract", "subscription_oca"]
+
+[[case]]
+query = "customers send support tickets that our team answers"
+version = "17.0"
+kind = "exists"
+expected = ["helpdesk_mgmt"]
+
+[[case]]
+query = "schedule technicians to go out to customer sites"
+version = "16.0"
+kind = "exists"
+expected = ["fieldservice"]
+
+[[case]]
+query = "store and organize company documents in folders"
+version = "19.0"
+kind = "exists"
+expected = ["dms"]
+
+[[case]]
+query = "separate first name and last name for contacts"
+version = "19.0"
+kind = "exists"
+expected = ["partner_firstname"]
+
+[[case]]
+query = "agreement with a customer for a large quantity delivered in several orders over the year"
+version = "17.0"
+kind = "exists"
+expected = ["sale_blanket_order"]
+
+[[case]]
+query = "back up the database every night"
+version = "16.0"
+kind = "exists"
+expected = ["auto_backup"]
+
+[[case]]
+query = "vendor bills must be approved before they are posted"
+version = "17.0"
+kind = "exists"
+expected = ["account_move_tier_validation"]
+
+[[case]]
+query = "sell a bundle of several products as one item"
+version = "19.0"
+kind = "exists"
+expected = ["product_pack", "sale_product_pack"]
+
+[[case]]
+query = "pay many vendor bills at once with a file for the bank"
+version = "16.0"
+kind = "exists"
+expected = ["account_payment_order"]
+
+[[case]]
+query = "make the backend usable on phones"
+version = "17.0"
+kind = "exists"
+expected = ["web_responsive"]
+
+[[case]]
+query = "sync products and orders with our Shopify store"
+version = "18.0"
+kind = "exists"
+expected = ["shopify_connector"]
+
+[[case]]
+query = "let customers book a table at our restaurant"
+version = "18.0"
+kind = "exists"
+expected = ["hotel_restaurant"]
+
+[[case]]
+query = "send WhatsApp messages to customers from Odoo"
+version = "17.0"
+kind = "exists"
+expected = ["mail_gateway_whatsapp"]
+
+[[case]]
+query = "customers sign quotes and contracts electronically"
+version = "18.0"
+kind = "exists"
+expected = ["sign_oca"]
+
+[[case]]
+query = "keep track of vehicle fuel purchases and consumption"
+version = "18.0"
+kind = "exists"
+expected = ["fleet_vehicle_log_fuel"]
+
+[[case]]
+query = "track the CO2 emissions of our purchases and expenses"
+version = "18.0"
+kind = "exists"
+expected = ["sustainability", "sustainability_purchase"]
+
+# --- other_version ---
+[[case]]
+query = "send WhatsApp messages to customers from Odoo"
+version = "19.0"
+kind = "other_version"
+expected = ["mail_gateway_whatsapp"]
+note = "16.0-18.0; 19.0 migration PR open"
+
+[[case]]
+query = "sync products and orders with our Shopify store"
+version = "17.0"
+kind = "other_version"
+expected = ["shopify_connector"]
+note = "18.0 and 19.0 only, no 17.0 PR"
+
+[[case]]
+query = "schedule posts to our company's social media accounts"
+version = "18.0"
+kind = "other_version"
+expected = ["social_media_base"]
+note = "17.0 only; 18.0 migration PR open"
+
+[[case]]
+query = "keep track of vehicle fuel purchases and consumption"
+version = "17.0"
+kind = "other_version"
+expected = ["fleet_vehicle_log_fuel"]
+note = "16.0, 18.0, 19.0; no 17.0 PR"
+
+[[case]]
+query = "customers must order at least 10 units or in multiples of a box"
+version = "19.0"
+kind = "other_version"
+expected = ["sale_restricted_qty"]
+note = "16.0-18.0; 19.0 migration PR open"
+
+[[case]]
+query = "employees submit weekly timesheets for their manager to approve"
+version = "19.0"
+kind = "other_version"
+expected = ["hr_timesheet_sheet"]
+note = "16.0-18.0; 19.0 migration PRs open"
+
+# --- absent ---
+[[case]]
+query = "predict next month's sales with machine learning"
+version = "18.0"
+kind = "absent"
+partial = ["sale_order_product_recommendation", "contract_forecast"]
+
+[[case]]
+query = "schedule drone deliveries"
+version = "18.0"
+kind = "absent"
+partial = []
+
+[[case]]
+query = "track employee gym memberships and reimburse the fees"
+version = "17.0"
+kind = "absent"
+partial = []
+
+[[case]]
+query = "weekly employee mood survey with a happiness score dashboard"
+version = "18.0"
+kind = "absent"
+partial = ["mgmtsystem_survey"]
+
+[[case]]
+query = "scan paper receipts with a phone camera to create expense reports automatically"
+version = "18.0"
+kind = "absent"
+partial = ["hr_expense_vendor_receipt"]
+
+[[case]]
+query = "let website visitors chat with an AI assistant"
+version = "18.0"
+kind = "absent"
+partial = ["ai_oca_bridge", "ai_oca_bridge_chatter"]
+
+[[case]]
+query = "automatically retry failed credit card payments for subscriptions"
+version = "18.0"
+kind = "other_version"
+expected = ["contract_payment_auto"]
+note = "16.0 only; first written as absent, the catalog arm found it (retry count and interval settings)"
+
+[[case]]
+query = "track employee vaccination records"
+version = "18.0"
+kind = "absent"
+partial = []
+
+[[case]]
+query = "import orders from our Amazon seller account"
+version = "18.0"
+kind = "absent"
+partial = ["sale_order_import", "sale_channel"]

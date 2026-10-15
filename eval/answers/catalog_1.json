@@ -1,0 +1,13 @@
+{
+  "1": {"strong": ["sale_financial_risk"], "partial": [], "other_versions": []},
+  "6": {"strong": ["stock_split_picking"], "partial": [], "other_versions": []},
+  "10": {"strong": ["base_user_role"], "partial": [], "other_versions": []},
+  "17": {"strong": ["sale_blanket_order"], "partial": [], "other_versions": []},
+  "19": {"strong": ["account_move_tier_validation"], "partial": [], "other_versions": []},
+  "23": {"strong": ["shopify_connector"], "partial": [], "other_versions": []},
+  "28": {"strong": ["sustainability", "sustainability_hr_expense_report"], "partial": [], "other_versions": []},
+  "33": {"strong": [], "partial": [], "other_versions": ["sale_restricted_qty", "sell_only_by_packaging"]},
+  "34": {"strong": [], "partial": [], "other_versions": ["hr_timesheet_sheet"]},
+  "35": {"strong": [], "partial": ["stock_demand_estimate"], "other_versions": []},
+  "37": {"strong": [], "partial": ["hr_expense_invoice", "payroll_contract_advantages"], "other_versions": []}
+}

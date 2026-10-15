@@ -1,0 +1,20 @@
+predict next month's sales with machine learning
+calculate the carbon footprint of each delivery
+let customers book a table at our restaurant
+scan paper receipts with a phone camera to create expense reports automatically
+sync products and orders with our Shopify store
+automatically post new products to our social media accounts
+weekly employee mood survey with a happiness score dashboard
+schedule drone deliveries
+track employee gym memberships and reimburse fees
+run payroll for employees in the Philippines
+send WhatsApp messages to customers from Odoo
+scan barcodes with a handheld device to receive and move stock in the warehouse
+customers sign quotes and contracts electronically
+rent out hotel rooms and manage guest bookings
+keep track of vehicle fuel purchases and consumption
+manage livestock animals on a farm
+print shipping labels for a specific carrier like UPS
+give customers loyalty points they can redeem on later orders
+let customers chat with an AI assistant on our website
+automatically retry failed credit card payments for subscriptions

@@ -1,0 +1,28 @@
+# What the OCA search data covers. Edit this, then run `uv run oca-index update`.
+
+# Odoo versions to include. Adding one fetches and summarizes it on the next update; removing
+# one drops it from the data.
+versions = ["16.0", "17.0", "18.0", "19.0"]
+
+# OCA repos to leave out, as glob patterns. keep_repos wins over exclude_repos.
+#   OCB: OCA's fork of Odoo itself. OpenUpgrade: the migration framework.
+#   oca-custom: OCA's own website modules. l10n-*: country localizations.
+exclude_repos = ["OCB", "OpenUpgrade", "oca-custom", "l10n-*"]
+keep_repos = ["l10n-usa"]
+
+# Modules to leave out in any repo, as glob patterns. test_*: test fixtures.
+exclude_modules = ["test_*"]
+
+# Where the OCA checkouts live (about 3 GB). Not in the repo.
+data_dir = "~/.local/share/oca-index"
+
+[summaries]
+# Model that writes the module summaries when an Anthropic API key is set.
+model = "claude-haiku-5-5"
+# Modules per pending batch file (one Claude Code subagent, or one Batch API chunk).
+batch_size = 220
+
+[skill]
+# Public URL the skill downloads current migration status from when it runs (falls back to the
+# copy bundled at build). Empty to only use the bundled copy.
+migrations_url = "https://raw.githubusercontent.com/bpqoc/search-test/main/data/migrations.jsonl"

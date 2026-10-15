@@ -1,0 +1,57 @@
+{
+  "7": {
+    "strong": ["sale_restricted_qty"],
+    "partial": [],
+    "other_versions": []
+  },
+  "9": {
+    "strong": ["queue_job"],
+    "partial": [],
+    "other_versions": []
+  },
+  "12": {
+    "strong": ["subscription_oca", "contract"],
+    "partial": ["partner_invoicing_mode"],
+    "other_versions": []
+  },
+  "13": {
+    "strong": ["helpdesk_mgmt"],
+    "partial": [],
+    "other_versions": []
+  },
+  "14": {
+    "strong": ["fieldservice"],
+    "partial": [],
+    "other_versions": []
+  },
+  "15": {
+    "strong": ["dms"],
+    "partial": [],
+    "other_versions": []
+  },
+  "18": {
+    "strong": ["auto_backup"],
+    "partial": [],
+    "other_versions": []
+  },
+  "26": {
+    "strong": ["sign_oca"],
+    "partial": [],
+    "other_versions": []
+  },
+  "30": {
+    "strong": [],
+    "partial": ["connector"],
+    "other_versions": ["shopify_connector"]
+  },
+  "38": {
+    "strong": [],
+    "partial": [],
+    "other_versions": []
+  },
+  "42": {
+    "strong": [],
+    "partial": ["hr_employee_medical_examination"],
+    "other_versions": []
+  }
+}

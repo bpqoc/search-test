@@ -1,0 +1,10 @@
+3. [17.0] keep a history of who changed what on records
+4. [18.0] limit which products each customer is allowed to buy
+16. [19.0] separate first name and last name for contacts
+20. [19.0] sell a bundle of several products as one item
+24. [18.0] let customers book a table at our restaurant
+25. [17.0] send WhatsApp messages to customers from Odoo
+27. [18.0] keep track of vehicle fuel purchases and consumption
+29. [19.0] send WhatsApp messages to customers from Odoo
+31. [18.0] schedule posts to our company's social media accounts
+41. [18.0] automatically retry failed credit card payments for subscriptions

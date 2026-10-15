@@ -1,0 +1,11 @@
+1. [16.0] stop a sales order being confirmed if the customer owes us too much money
+6. [19.0] break one delivery into two separate deliveries
+10. [17.0] give each user a job role that bundles all the access rights they need
+17. [17.0] agreement with a customer for a large quantity delivered in several orders over the year
+19. [17.0] vendor bills must be approved before they are posted
+23. [18.0] sync products and orders with our Shopify store
+28. [18.0] track the CO2 emissions of our purchases and expenses
+33. [19.0] customers must order at least 10 units or in multiples of a box
+34. [19.0] employees submit weekly timesheets for their manager to approve
+35. [18.0] predict next month's sales with machine learning
+37. [17.0] track employee gym memberships and reimburse the fees

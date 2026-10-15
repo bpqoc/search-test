@@ -1,0 +1,52 @@
+{
+  "3": {
+    "strong": ["auditlog"],
+    "partial": ["tracking_manager"],
+    "other_versions": []
+  },
+  "4": {
+    "strong": ["sale_order_product_assortment"],
+    "partial": ["product_assortment"],
+    "other_versions": []
+  },
+  "16": {
+    "strong": ["partner_firstname"],
+    "partial": [],
+    "other_versions": []
+  },
+  "20": {
+    "strong": ["product_pack", "sale_product_pack"],
+    "partial": ["product_set"],
+    "other_versions": []
+  },
+  "24": {
+    "strong": [],
+    "partial": ["hotel_restaurant"],
+    "other_versions": []
+  },
+  "25": {
+    "strong": ["mail_gateway_whatsapp"],
+    "partial": [],
+    "other_versions": []
+  },
+  "27": {
+    "strong": ["fleet_vehicle_log_fuel"],
+    "partial": [],
+    "other_versions": []
+  },
+  "29": {
+    "strong": [],
+    "partial": [],
+    "other_versions": ["mail_gateway_whatsapp"]
+  },
+  "31": {
+    "strong": [],
+    "partial": [],
+    "other_versions": ["social_media_base"]
+  },
+  "41": {
+    "strong": [],
+    "partial": ["subscription_oca"],
+    "other_versions": ["contract_payment_auto"]
+  }
+}
